@@ -11,9 +11,9 @@ const currentScore0El = document.getElementById("current--0");
 const currentScore1El = document.getElementById("current--1");
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
-const winPlayer = document.querySelector(".player--winner")
+const winPlayer = document.querySelector(".player--winner");
 let scores, currScore, activePlayer, playing;
-const winSpan = document.createElement("span")
+const winSpan = document.createElement("span");
 
 const init = function () {
   //Starting conditions
@@ -22,8 +22,8 @@ const init = function () {
   activePlayer = 0;
   // initial state
   playing = true;
-  
-  winSpan.textContent=" ";
+
+  winSpan.textContent = " ";
   score0El.textContent = 0;
   score1El.textContent = 0;
   currentScore0El.textContent = 0;
@@ -36,7 +36,6 @@ const init = function () {
   player1El.classList.remove("player--active");
   // set player 1 as starting player
   player0El.classList.add("player--active");
-
 };
 
 init();
@@ -66,9 +65,8 @@ btnRoll.addEventListener("click", function () {
     if (dice !== 1) {
       currScore += dice;
       // select who ever is active
-      document.getElementById(
-        `current--${activePlayer}`
-      ).textContent = currScore;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currScore;
     } else {
       // if it is a 1 then switch player
       switchPlayer();
@@ -86,25 +84,22 @@ btnHold.addEventListener("click", function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
     // if the score is 100, then current player wins and game finished
-    if (scores[activePlayer] >= 20) {
-
+    if (scores[activePlayer] >= 100) {
       playing = false;
       diceEl.classList.add("hidden");
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.add("player--winner");
 
-    winSpan.textContent = "YOU WON!!";
-    winSpan.style.color="white";
-    const winPlayer = document.querySelector(".player--winner")
-     winPlayer.append(winSpan)
+      winSpan.textContent = "YOU WON 🥳";
+      winSpan.classList.add("winMessage");
+      const winPlayer = document.querySelector(".player--winner");
+      winPlayer.append(winSpan);
+
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove("player--active");
       diceEl.classList.add("hidden");
-
-
-
     } else {
       // if < 100, switch player
       switchPlayer();

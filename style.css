@@ -16,23 +16,24 @@ body {
   font-weight: 400;
   height: 100vh;
   color: #333;
-  background-image: linear-gradient(to top left,white 0%, black 100%);
+  background-image: linear-gradient(to top left, white 0%, black 100%);
 }
-h1, h2{
+h1,
+h2 {
   color: white;
   text-align: center;
-  margin: 20px
+  margin: 20px;
 }
 /* LAYOUT */
-.cards{
+.cards {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 main {
   position: relative;
-  width: 85rem;
-  height: 52rem;
+  width: 90rem;
+  height: 55rem;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -41,11 +42,11 @@ main {
   overflow: hidden;
   display: flex;
 }
-@media only screen and (max-width: 700px){
-    section{
+@media only screen and (max-width: 700px) {
+  section {
     width: 20rem;
-    }
   }
+}
 .player {
   flex: 50%;
   padding: 9rem;
@@ -175,4 +176,9 @@ main {
 
 .hidden {
   display: none;
+}
+.winMessage {
+  margin-top: 15px;
+  color: white;
+  font-size: 16px;
 }
