@@ -8,18 +8,19 @@ Created this fun DICE GAME using javascript.
 ## Table of Contents
 
 1. [Usage](#Usage)
-2. [Github repository and Netlify deployed app link](#Github-repository-Netlify-deployed-link)
+2. [Github repository and Netlify deployed app link](#Github-repository-deployed-link)
 3. [Questions](#Questions)
 
 ## Usage
 
 - From the HTML file, you can start the project in your browser for development mode.
+- Or click on the 'Deployed app link' to start playing!
 
-### Github-repository-Netlify-deployed-link
+### Github-repository-deployed-link
 
 - Github repository:
   [Github repository](https://github.com/JessicaPerez1/Dice-Game)
-- Netlify Deployed link:
+- Deployed link:
   [Deployed app link](https://jessicaperez1.github.io/Dice-Game/)
 
 ### Questions
